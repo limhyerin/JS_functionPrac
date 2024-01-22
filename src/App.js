@@ -14,8 +14,6 @@ function App() {
       tempResult += `${index}: ${fruit} ,`;
       index++;
     });
-    // tempResult = tempResult.slice(0, -2);
-    // setResult(tempResult);
     setResult(tempResult.slice(0, -2));
   };
 
@@ -138,13 +136,6 @@ function App() {
     if (!query) {
       setResult("Not found");
     } else {
-      // let trueFalse = false;
-      // const strFind = array.find((fruit) => {
-      //   if (fruit === query) {
-      //     trueFalse = true;
-      //     return fruit === query;
-      //   }
-      // });
       const strFind = array.find((fruit) => fruit.includes(query));
       if (!strFind) {
         setResult("Not found");
@@ -187,8 +178,6 @@ function App() {
     let tempResult = [...array];
     tempResult = tempResult.sort().reverse();
     newArr = tempResult.join(", ");
-    // tempResult = tempResult.slice(0, -2);
-    // setResult(tempResult);
     setResult(newArr);
   };
   return (
