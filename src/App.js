@@ -14,8 +14,6 @@ function App() {
       tempResult += `${index}: ${fruit} ,`;
       index++;
     });
-    // tempResult = tempResult.slice(0, -2);
-    // setResult(tempResult);
     setResult(tempResult.slice(0, -2));
   };
 
@@ -138,13 +136,6 @@ function App() {
     if (!query) {
       setResult("Not found");
     } else {
-      // let trueFalse = false;
-      // const strFind = array.find((fruit) => {
-      //   if (fruit === query) {
-      //     trueFalse = true;
-      //     return fruit === query;
-      //   }
-      // });
       const strFind = array.find((fruit) => fruit.includes(query));
       if (!strFind) {
         setResult("Not found");
@@ -172,7 +163,7 @@ function App() {
   /* every */
   /* 모든 과일명이 5글자를 초과하는 경우 true를 출력, 그 외의 경우 false를 출력 */
   const handEvery = () => {
-    const everyLength = array.some((fruit) => fruit.length > 5);
+    const everyLength = array.every((fruit) => fruit.length > 5);
     if (!everyLength) {
       setResult("false");
     } else {
@@ -187,8 +178,6 @@ function App() {
     let tempResult = [...array];
     tempResult = tempResult.sort().reverse();
     newArr = tempResult.join(", ");
-    // tempResult = tempResult.slice(0, -2);
-    // setResult(tempResult);
     setResult(newArr);
   };
   return (
