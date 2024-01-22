@@ -20,11 +20,10 @@ function App() {
   /* Filter */
   const handleFilter = () => {
     const filteredList = array.filter(function (fruit) {
-      // 얘를 필터링을 할지 말지를 결정한다.
       if (fruit.includes(query)) {
         return true;
       } else {
-        return false; // 여기서 결정한다.
+        return false;
       }
     });
     setResult(filteredList.join(", "));
@@ -32,7 +31,6 @@ function App() {
 
   /* Map */
   const handleMap = () => {
-    // array를 대문자로 변환하여 출력
     const mappedList = array.map(function (fruit) {
       return fruit.toUpperCase();
     });
